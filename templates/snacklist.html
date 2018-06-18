@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block content %}
+<ol>
+ {% for snack in snacks  %}
+<li><a href="{{url_for('edit_snack', snackid=snack.id)}}">{{ snack.name}}</a></li>
+{% endfor %}
+</ol>
+<a href="{{url_for('new_snack_form')}}"> Add snack</a>
+
+{% endblock %}

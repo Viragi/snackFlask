@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block content %}
+<form action="{{url_for('add_snack')}}" method="POST">
+<p> Snack Name: <input type="text" name="name"></p>
+<p>Kind: <input type="text" name="price" ></p>
+<button name="addSnack"> ADD SNACK</button>
+</form>
+<a href="{{url_for('get_snack_list')}}"> Snack List</a>
+
+{% endblock %}
